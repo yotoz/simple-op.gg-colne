@@ -1,0 +1,38 @@
+.nav-bar {
+  height: 3%;
+  width: 100%;
+
+  .nav-container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+
+    .nav-home,
+    .nav-about,
+    .nav-posts,
+    .nav-sign {
+      flex: 1;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .nav-icons {
+        cursor: pointer;
+      }
+    }
+    .nav-home {
+    }
+
+    .nav-about {
+    }
+
+    .nav-posts {
+    }
+
+    .nav-sign {
+    }
+  }
+}
