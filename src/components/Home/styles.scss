@@ -1,0 +1,143 @@
+$bgColor: #5383e8;
+$siteImage: url('../../resources/site.png');
+
+$textBoxBgColor: #fff;
+
+.home {
+	display: flex;
+	align-items: center;
+
+	flex-direction: column;
+
+	background-color: $bgColor;
+
+	height: 97%;
+	width: 100%;
+
+	.home-logo-container {
+		width: 100%;
+		height: 200px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		padding: 32px 0 24px;
+
+		.home-logo-image {
+			width: auto;
+			height: 100%;
+		}
+	}
+
+	.home-search-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+
+		.home-search-form {
+			position: relative;
+			background-color: $textBoxBgColor;
+
+			width: 625px;
+			height: 50px;
+
+			border-radius: 2px;
+
+			.home-search-box {
+				width: 100%;
+				height: 100%;
+
+				display: block;
+				padding: 15px 80px 18px 17px;
+				background: none;
+				border: none;
+				line-height: 17px;
+				font-size: 14px;
+				color: #9b9b9b;
+				box-sizing: border-box;
+				outline: none;
+				box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+			}
+
+			.home-search-button {
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				margin: 10px 10px 0 0;
+				height: 30px;
+				padding: 0;
+				border: none;
+
+				.sprite-42 {
+					background-position: -90px -797px;
+					width: 50px;
+					height: 30px;
+				}
+
+				.sprite-site {
+					background-image: $siteImage;
+					display: inline-block;
+					vertical-align: middle;
+					text-indent: -99999px;
+
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.home-posts-table {
+		display: table;
+
+		width: 625px;
+
+		.home-posts-caption {
+			display: table-caption;
+
+			.home-posts-title {
+				display: flex;
+
+				.home-posts-title-text {
+					cursor: pointer;
+				}
+			}
+		}
+
+		.home-posts-table-row {
+			display: table-row;
+
+			width: 100%;
+
+			.home-posts-table-cell {
+				display: table-cell;
+
+				width: 50%;
+				height: 50px;
+
+				.home-posts-table-cell-container {
+					display: flex;
+					width: 100%;
+					height: 100%;
+
+					align-items: center;
+					justify-content: center;
+
+					.home-posts-table-cell-content {
+						border: 1px solid black;
+						border-radius: 3px;
+
+						width: 97%;
+						height: 90%;
+
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
