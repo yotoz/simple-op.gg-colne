@@ -1,10 +1,10 @@
 import React from 'react';
 import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Link,
-  Redirect,
+	BrowserRouter,
+	Switch,
+	Route,
+	Link,
+	Redirect,
 } from 'react-router-dom';
 import './App.scss';
 
@@ -16,30 +16,36 @@ import Posts from './components/Posts';
 import Sign from './components/Sign';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <NavBar></NavBar>
-        <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/posts">
-            <Posts />
-          </Route>
-          <Route path="/sign">
-            <Sign />
-          </Route>
-          <Route>
-            <div>아시방 선택하쇼</div>
-          </Route>
-        </Switch>
-      </div>
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter>
+			<div className="App">
+				<NavBar></NavBar>
+				<Switch>
+					<Route path="/home">
+						<Home />
+					</Route>
+					<Route path="/about/:target">
+						<About />
+					</Route>
+					<Route path="/about">
+						<Redirect to="/about/nothing" />
+					</Route>
+					<Route path="/posts/:target">
+						<Posts />
+					</Route>
+					<Route path="/posts">
+						<Redirect to="/posts/main" />
+					</Route>
+					<Route path="/sign">
+						<Sign />
+					</Route>
+					<Route>
+						<div>아시방 선택하쇼</div>
+					</Route>
+				</Switch>
+			</div>
+		</BrowserRouter>
+	);
 }
 
 export default App;
